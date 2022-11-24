@@ -1,3 +1,13 @@
+import sumArray from "./sum-array.js";
+import multiplyArrayElements from "./multiply-array-elements.js";
+import arrayMultiplier from "./array-multiplier.js";
+
+export {
+    sumArray,
+    multiplyArrayElements,
+    arrayMultiplier
+}
+
 /**
  * Root for your util libraries.
  *

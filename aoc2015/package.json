@@ -15,10 +15,10 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^16.11.6",
+    "@typescript-eslint/parser": "^5.44.0",
     "aocrunner": "^1.6.1",
     "prettier": "^2.4.1"
   },
-  "dependencies": {},
   "engines": {
     "node": ">=16.13.0"
   }

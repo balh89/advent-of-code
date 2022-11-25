@@ -1,12 +1,9 @@
 import sumArray from "./sum-array.js";
 import multiplyArrayElements from "./multiply-array-elements.js";
 import arrayMultiplier from "./array-multiplier.js";
+import create2DArray from "./create-2d-array.js";
 
-export {
-    sumArray,
-    multiplyArrayElements,
-    arrayMultiplier
-}
+export { sumArray, multiplyArrayElements, arrayMultiplier, create2DArray };
 
 /**
  * Root for your util libraries.

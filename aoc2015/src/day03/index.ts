@@ -2,6 +2,11 @@ import run from "aocrunner";
 
 const parseInput = (rawInput: string) => rawInput;
 
+type Coordinates = {
+  x: number;
+  y: number;
+};
+
 const part1 = (rawInput: string) => {
   const input = parseInput(rawInput);
   const moves = input.split("");
@@ -26,8 +31,7 @@ const part2 = (rawInput: string) => {
 function getVisitedHouses(moves: Array<string>) {
   return moves.reduce(
     (acc, move) => {
-      const newCoordinates = getCoordinates(acc.coordinates, move);
-      acc.coordinates = newCoordinates;
+      acc.coordinates = getCoordinates(acc.coordinates, move);
       const { x, y } = acc.coordinates;
       const key = `x:${x}y:${y}`;
       acc.visitedHouses[key] = acc.visitedHouses[key]
@@ -39,7 +43,7 @@ function getVisitedHouses(moves: Array<string>) {
   );
 }
 
-function getCoordinates(currentCoordinates: Object, move: String) {
+function getCoordinates(currentCoordinates: Coordinates, move: string) {
   const newCoordinates = { ...currentCoordinates };
   switch (move) {
     case ">": {

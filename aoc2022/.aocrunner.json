@@ -1,20 +1,20 @@
 {
   "version": 1,
   "year": 2022,
-  "language": "ts",
+  "language": "js",
   "days": [
     {
       "part1": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "69795",
         "attempts": [],
-        "time": null
+        "time": 0.1881
       },
       "part2": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "208437",
         "attempts": [],
-        "time": null
+        "time": 0.2283
       }
     },
     {

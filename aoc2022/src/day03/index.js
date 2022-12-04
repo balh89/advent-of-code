@@ -3,14 +3,14 @@ import run from "aocrunner";
 const parseInput = (rawInput) => rawInput;
 
 const part1 = (rawInput) => {
-  const input = parseInput(rawInput).split(/\n/);
+  const input = getInput(rawInput)
   const scoreMap = {
     ...generateAlphabetScoreMap(),
     ...generateAlphabetScoreMap(true)
   }
 
   return input.reduce((sum, rucksack) => {
-    const [firstCompartment, secondCompartment] = spliRucksackCompartments(rucksack);
+    const [firstCompartment, secondCompartment] = splitRucksackCompartments(rucksack);
     const itemsInFirstCompartment = getItemsInCompartment(firstCompartment);
     const itemsInSecondCompartment = getItemsInCompartment(secondCompartment);
     Object.keys(itemsInFirstCompartment).forEach(item => {
@@ -45,14 +45,13 @@ const part2 = (rawInput) => {
       return (itemsInSecond[item] && itemsInThird[item])
     })
   }
-
-  function getInput(rawInput) {
-    return parseInput(rawInput).split(/\n/);
-  }
 };
 
+function getInput(rawInput) {
+  return parseInput(rawInput).split(/\n/);
+}
 
-function spliRucksackCompartments(rucksack) {
+function splitRucksackCompartments(rucksack) {
   const half = Math.ceil(rucksack.length / 2);
   return [rucksack.slice(0, half), rucksack.slice(half)];
 }

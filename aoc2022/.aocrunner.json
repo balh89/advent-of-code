@@ -191,27 +191,27 @@
           "5551",
           "7433"
         ],
-        "time": 0.5036
+        "time": 0.4956
       },
       "part2": {
         "solved": true,
         "result": "21691",
         "attempts": [],
-        "time": 2.3104
+        "time": 2.3419
       }
     },
     {
       "part1": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "779",
         "attempts": [],
-        "time": null
+        "time": 9.7073
       },
       "part2": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "27426",
         "attempts": [],
-        "time": null
+        "time": 44.7352
       }
     },
     {

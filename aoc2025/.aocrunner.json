@@ -13,13 +13,13 @@
           "42",
           "48"
         ],
-        "time": 1.2192
+        "time": 1.4469
       },
       "part2": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "6289",
         "attempts": [],
-        "time": null
+        "time": 3.3184
       }
     },
     {

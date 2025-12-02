@@ -35,9 +35,28 @@ function performRotations(rotations) {
 
 const part2 = (rawInput) => {
   const input = parseInput(rawInput);
+  const { zeroCount } = performRotations0x434C49434B(input);
 
-  return;
+  return zeroCount
 };
+
+function performRotations0x434C49434B(rotations) {
+  return rotations.reduce((acc, { direction, digit }) => {
+    for (let i = 1;i <= digit; i++) {
+          acc.count += direction === RIGHT ? 1 : -1;
+          if (acc.count === 0) {
+            acc.zeroCount++;
+          } else if (acc.count === -1) {
+            acc.count = 99;
+          } else if (acc.count === 100) {
+            acc.count = 0;
+            acc.zeroCount++;
+          }
+    }
+
+    return acc;
+  }, { count: 50, zeroCount: 0 })
+}
 
 run({
   part1: {
@@ -60,10 +79,19 @@ L82`,
   },
   part2: {
     tests: [
-      // {
-      //   input: ``,
-      //   expected: "",
-      // },
+{
+        input: `L68
+L30
+R48
+L5
+R60
+L55
+L1
+L99
+R14
+L82`,
+        expected: 6,
+}
     ],
     solution: part2,
   },
